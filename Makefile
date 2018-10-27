@@ -30,3 +30,13 @@ google:
 packages:
 	yaourt -Sy thefuck
 	sudo pacman -Sy ack htop mtr fzf fish
+
+.PHONY: i3
+i3:
+	sudo pacman -Sy i3 compton
+	yaourt -Sy goblocks
+	sudo pacman -Sy python-pip
+	sudo wget https://raw.githubusercontent.com/lbonn/i3-quickterm/master/i3-quickterm -O /usr/bin/i3-quickterm
+	sudo chmod +x /usr/bin/i3-quickterm
+	pip install --user i3ipc
+	

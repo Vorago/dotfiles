@@ -1,0 +1,25 @@
+global:
+    debug: False
+    refresh_interval: 1
+
+blocks:
+    - type: load
+      label: "L: "
+      crit_load: 4
+
+    - type: memory
+      label: "M: "
+      crit_mem: 1
+
+    - type: temperature
+      cpu_temp_path: /sys/devices/platform/coretemp.0/hwmon
+      crit_temp: 50
+
+    - type: battery
+      label: "B0: "
+      battery_number: 0
+      crit_battery: 20
+
+    - type: time
+      update_interval: 0.5
+      time_format: 2006-01-02 15:04:05
