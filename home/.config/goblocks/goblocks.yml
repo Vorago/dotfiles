@@ -4,7 +4,7 @@ global:
 
 blocks:
     - type: load
-      label: "L: "
+      label: " "
       crit_load: 4
 
     - type: memory
@@ -15,11 +15,32 @@ blocks:
       cpu_temp_path: /sys/devices/platform/coretemp.0/hwmon
       crit_temp: 50
 
+    - type: wifi
+      label: " "
+      interface_name: wlp58s0
+      crit_quality: 30
+
     - type: battery
-      label: "B0: "
+      label: " "
+      # The battery number can be found in /sys/class/power_supply/
       battery_number: 0
       crit_battery: 20
 
+    # The volume block currently supports Pulse or ALSA channels through amixer.
+    # The amixer utility must be installed and in your $PATH.
+    - type: volume
+      update_interval: 60
+      label: " "
+      update_signal: 1
+      # mixer_device defines the device name to use. If omitted, the default
+      # value is "default". Other possible values include "pulse".
+      mixer_device: default
+      # channel defines the volume channel to monitor. If omitted, the default
+      # value is "Master".
+      channel: Master
+
     - type: time
       update_interval: 0.5
+      # The time_format value must be a string in Go's standard time format
+      # (see https://golang.org/pkg/time/#pkg-constants).
       time_format: 2006-01-02 15:04:05

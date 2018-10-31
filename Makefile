@@ -1,5 +1,5 @@
 .DEFAULT_GOAL: install
-install: packages fish kube google
+install: packages i3 fish google
 
 .PHONY: fish
 fish:
@@ -16,26 +16,18 @@ fish:
 	set -g theme_powerline_fonts yes
 	set -g theme_nerd_fonts yes
 
-.PHONY: kube
-kube:
-	yaourt -Sy kubectl-bin kubectx kubernetes-helm-bin
-
 .PHONY: google
 google:
 	sudo wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O /usr/bin/cloud_sql_proxy
 	sudo chmod +x /usr/bin/cloud_sql_proxy
-	yaourt -Sy google-cloud-sdk
 
 .PHONY: packages
 packages:
-	yaourt -Sy thefuck
-	sudo pacman -Sy ack htop mtr fzf fish
+	yay -S --needed - < yay.list
+	sudo pacman -S --needed - < pacman.list
 
 .PHONY: i3
 i3:
-	sudo pacman -Sy i3 compton
-	yaourt -Sy goblocks
-	sudo pacman -Sy python-pip
 	sudo wget https://raw.githubusercontent.com/lbonn/i3-quickterm/master/i3-quickterm -O /usr/bin/i3-quickterm
 	sudo chmod +x /usr/bin/i3-quickterm
 	pip install --user i3ipc

@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango:DejaVu Sans Mono 10
+font pango:FuraCodeNerdFont 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -11,6 +11,7 @@ bindsym $mod+Shift+q kill
 # Keyboard
 exec --no-startup-id "setxkbmap -layout us,ru"
 exec --no-startup-id "setxkbmap -option 'grp:caps_toggle'"
+exec --no-startup-id "xinput set-prop 12 \"libinput Tapping Enabled\" 1"
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id "rofi -show drun -config ~/.config/i3/rofi";
