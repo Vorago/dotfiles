@@ -3,6 +3,7 @@ compton
 docker
 docker-compose
 dropbox
+dunst
 fish
 fzf
 go
@@ -10,6 +11,7 @@ go-tools
 gradle
 htop
 i3-wm
+i3lock
 jetbrains-toolbox
 keepassxc
 mtr
@@ -21,3 +23,4 @@ vim
 xclip
 yay
 python-pip
+
