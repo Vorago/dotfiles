@@ -1,5 +1,7 @@
+
 ack
 compton
+dialog
 docker
 docker-compose
 dropbox
@@ -10,11 +12,13 @@ go
 go-tools
 gradle
 htop
-i3-wm
 i3lock
+i3-wm
 jetbrains-toolbox
 keepassxc
 mtr
+playerctl
+python-pip
 telegram-desktop
 termite
 tmux
@@ -22,5 +26,3 @@ unzip
 vim
 xclip
 yay
-python-pip
-

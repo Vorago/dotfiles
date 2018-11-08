@@ -40,3 +40,8 @@ config:
 bin:
 	chmod +x bin/*
 	sudo cp bin/* /usr/bin/
+
+.PHONY: sort
+sort:
+	sort -o pacman.list pacman.list
+	sort -o yay.list yay.list

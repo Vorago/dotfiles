@@ -9,8 +9,7 @@ bindsym $mod+Return exec termite
 bindsym $mod+Shift+q kill
 
 # Keyboard
-exec --no-startup-id "setxkbmap -layout us,ru"
-exec --no-startup-id "setxkbmap -option 'grp:caps_toggle'"
+exec --no-startup-id "setxkbmap -layout us,ru -option 'grp:caps_toggle'"
 exec --no-startup-id "xinput set-prop 12 \"libinput Tapping Enabled\" 1"
 
 # start dmenu (a program launcher)
@@ -127,14 +126,14 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+set $mode_system System (l) lock, (e) logout, (p) suspend, (h) hibernate, (r) reboot, (s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3exit lock, mode "default"
     bindsym e exec --no-startup-id i3exit logout, mode "default"
-    bindsym s exec --no-startup-id i3exit suspend, mode "default"
+    bindsym p exec --no-startup-id i3exit suspend, mode "default"
     bindsym h exec --no-startup-id i3exit hibernate, mode "default"
     bindsym r exec --no-startup-id i3exit reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+    bindsym s exec --no-startup-id i3exit shutdown, mode "default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -149,6 +148,9 @@ bar {
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -set 40; notify-send 'Brightness up'"
