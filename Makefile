@@ -23,8 +23,8 @@ google:
 
 .PHONY: packages
 packages:
-	yay -S --needed - < yay.list
 	sudo pacman -S --needed - < pacman.list
+	yay -S --needed - < yay.list
 
 .PHONY: i3
 i3:
