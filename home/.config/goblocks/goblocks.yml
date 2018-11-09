@@ -29,7 +29,7 @@ blocks:
     # The volume block currently supports Pulse or ALSA channels through amixer.
     # The amixer utility must be installed and in your $PATH.
     - type: volume
-      update_interval: 60
+      update_interval: 1
       label: " "
       update_signal: 1
       # mixer_device defines the device name to use. If omitted, the default
