@@ -1,5 +1,5 @@
 .DEFAULT_GOAL: install
-install: packages i3 fish google
+install: packages i3 fish google config bin
 
 .PHONY: fish
 fish:
