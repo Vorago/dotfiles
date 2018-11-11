@@ -146,10 +146,6 @@ mode "$mode_system" {
 }
 bindsym $mod+Escape mode "$mode_system"
 
-bar {
-        status_command goblocks
-}
-
 set $notify_bright 1
 set $notify_sound 2
 set $notify_track 3
@@ -168,3 +164,4 @@ bindsym $mod+XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 10; dunst
 bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -set 1; dunstify -r $notify_bright 'Brightness down'"
 bindsym $mod+XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 10; dunstify -r $notify_bright 'Brightness down'"
 
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
