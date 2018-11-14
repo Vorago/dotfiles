@@ -1,14 +1,15 @@
 [bar/top]
-monitor = eDP-1
+monitor = ${env:MONITOR:eDP-1}
 width = 100%
-height = 60
-dpi = 192
+height = 30
+dpi = 96
 
 background = #ff222222
 foreground = #ccffffff
 
 line-color = ${bar/top.background}
 line-size = 16
+underline-size = 3
 
 spacing = 0
 padding-right = 1
@@ -21,7 +22,7 @@ font-3 = Termsynu:size=8:antialias=false;-2
 font-4 = FontAwesome:size=10;0
 
 modules-left = i3
-modules-right = cpu memory pulseaudio backlight wireless-network battery date
+modules-right = spotify cpu memory pulseaudio backlight wireless-network battery date
 
 [module/backlight]
 type = internal/xbacklight
@@ -65,6 +66,70 @@ animation-charging-framerate = 750
 
 [module/i3]
 type = internal/i3
+
+pin-workspaces = false
+
+label-dimmed-underline = ${root.background}
+
+; Available tags:
+;   <label-state> (default) - gets replaced with <label-(focused|unfocused|visible|urgent)>
+;   <label-mode> (default)
+format = <label-state> <label-mode>
+
+; Available tokens:
+;   %mode%
+; Default: %mode%
+label-mode = %mode%
+label-mode-padding = 0
+label-mode-background = #e60053
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+;   %output%
+; Default: %icon%  %name%
+label-focused =  %index%
+label-focused-foreground = #ffffff
+label-focused-background = #3f3f3f
+label-focused-underline = #fba922
+label-focused-padding = 1
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+;   %output%
+; Default: %icon%  %name%
+label-unfocused = %index%
+label-unfocused-padding = 1
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+;   %output%
+; Default: %icon%  %name%
+label-visible = %index%
+label-visible-underline = #555555
+label-visible-padding = 1
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+;   %output%
+; Default: %icon%  %name%
+label-urgent = %index%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-padding = 1
+
+; Separator in between workspaces
+label-separator = |
+label-separator-padding = 0
+label-separator-foreground = #ffb52a
+
 
 [module/cpu]
 type = internal/cpu
@@ -234,5 +299,14 @@ menu-2-1-exec = menu_open-0
 type = internal/date
 interval = 2
 date = %%{F#999}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M%%{F-}
+
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = " "
+format = <label>
+exec = /home/vorago/.config/polybar/spotify.py -f '{play_pause} {song} - {artist}' -p ','
+click-left = playerctl play-pause 
+format-underline = #1db954
 
 ; vim:ft=dosini
