@@ -7,6 +7,8 @@ fish:
 	fish /tmp/get-omf.fish
 	omf install bobthefish
 	omf install https://github.com/jethrokuan/fzf
+	omf install https://github.com/FabioAntunes/fish-nvm
+	omf install https://github.com/edc/bass
 	set -g theme_color_scheme solarized
 	set -g theme_newline_cursor yes
 	set -g theme_display_k8s_context yes
