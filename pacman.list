@@ -1,4 +1,3 @@
-
 ack
 compton
 dialog
@@ -7,6 +6,7 @@ docker-compose
 dropbox
 dunst
 fish
+flameshot
 fzf
 go
 go-tools

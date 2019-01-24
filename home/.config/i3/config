@@ -166,5 +166,7 @@ bindsym $mod+XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 10; dunst
 bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -set 1; dunstify -r $notify_bright 'Brightness down'"
 bindsym $mod+XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 10; dunstify -r $notify_bright 'Brightness down'"
 
+bindsym Print exec --no-startup-id "flameshot gui"
+
 exec_always --no-startup-id MONITOR=DP-1 $HOME/.config/polybar/launch.sh
 exec --no-startup-id nm-applet --sm-disable
