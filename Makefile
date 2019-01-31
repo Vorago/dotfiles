@@ -41,7 +41,7 @@ config:
 .PHONY: bin
 bin:
 	chmod +x bin/*
-	sudo cp bin/* /usr/bin/
+	sudo cp bin/* /usr/local/bin/
 
 .PHONY: sort
 sort:

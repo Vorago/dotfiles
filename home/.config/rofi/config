@@ -1,0 +1,3 @@
+rofi.theme:         solarized
+rofi.font:          hack 16
+rofi.dpi:           96
