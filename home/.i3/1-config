@@ -1,0 +1,18 @@
+set $mod Mod4
+
+font pango:FuraCodeNerdFont 10
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+
+
+
+
+
+
+
+
+
+
+

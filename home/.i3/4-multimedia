@@ -1,0 +1,19 @@
+set $notify_bright 1
+set $notify_sound 2
+set $notify_track 3
+
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-volume 0 +5%; dunstify -r $notify_sound 'Sound up'"
+bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-volume 0 -5%; dunstify -r $notify_sound 'Sound down'"
+bindsym XF86AudioMute exec --no-startup-id "pactl set-sink-mute 0 toggle; dunstify -r $notify_sound 'Mute'"
+bindsym XF86AudioPlay exec --no-startup-id "playerctl play-pause; dunstify -r $notify_track 'Play/Pause'"
+bindsym Pause exec --no-startup-id "playerctl play-pause; dunstify -r $notify_track 'Play/Pause'"
+
+bindsym XF86AudioNext exec --no-startup-id "playerctl next; dunstify -r $notify_track 'Next track'"
+bindsym XF86AudioPrev exec --no-startup-id "playerctl previous; dunstify -r $notify_track 'Previous track'"
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -set 40; dunstify -r $notify_bright 'Brightness up'"
+bindsym $mod+XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 10; dunstify -r $notify_bright 'Brightness up'"
+bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -set 1; dunstify -r $notify_bright 'Brightness down'"
+bindsym $mod+XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 10; dunstify -r $notify_bright 'Brightness down'"

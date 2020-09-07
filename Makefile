@@ -1,5 +1,5 @@
 .DEFAULT_GOAL: install
-install: packages i3 fish google config bin
+install: packages i3 fish google config config-i3 bin
 
 .PHONY: fish
 fish:
@@ -37,6 +37,11 @@ i3:
 .PHONY: config
 config:
 	cp -r home/.config/* ~/.config/
+
+.PHONY: config-i3
+config-i3:
+	mkdir -p ~/.i3
+	cat home/.i3/* > ~/.i3/config
 
 .PHONY: bin
 bin:
