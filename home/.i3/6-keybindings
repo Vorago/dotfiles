@@ -1,4 +1,4 @@
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec $terminal
 bindsym $mod+Shift+q kill
 
 bindsym $mod+d exec --no-startup-id "rofi -show drun";
@@ -7,7 +7,7 @@ bindsym $mod+p exec --no-startup-id "ls -1 /home/vorago/code | rofi -dmenu | xar
 
 # Dropdown terminal
 #bindsym ctrl+grave exec i3-quickterm shell
-exec --no-startup-id termite --name dropdown &
+exec --no-startup-id $terminal --name dropdown &
 
 bindsym ctrl+grave [instance="dropdown"] scratchpad show, resize set 1920 1200, move position center
 for_window [instance="dropdown"] floating enable, move scratchpad
