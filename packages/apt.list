@@ -1,5 +1,8 @@
+direnv
+flameshot
+fzf
+keepassxc
+nitrogen
 python3-pip
 thefuck
-flameshot
-nitrogen
-keepassxc
+zsh
