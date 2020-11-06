@@ -11,9 +11,10 @@ copyBin() {
 }
 
 installApps() {
+  packages/docker/install.sh
+  packages/insync/install.sh
   cat packages/apt.list | xargs sudo apt install -y
   cat packages/snap.list | xargs -L1 sudo snap install --classic
-  packages/insync/install.sh
 }
 
 installApps
