@@ -1,0 +1,20 @@
+[core]
+	autocrlf = input
+	safecrlf = true
+[user]
+	name = Andrew Naydyonock
+	email = a.vorago@gmail.com
+[gui]
+	encoding = utf-8
+[push]
+	default = simple
+[help]
+	autocorrect = -1
+[alias]
+	review = push origin HEAD:refs/for/master
+	fixup = commit --amend --no-edit
+	lg = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(bold white)%s%C(reset) %C(white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+[merge]
+	ff = only
+[pull]
+	ff = only
