@@ -1,9 +1,14 @@
+arandr
 direnv
 flameshot
 fzf
 keepassxc
 nitrogen
 python3-pip
+rofi
+snapd
 thefuck
+vim
+xdotool
 zsh
 docker

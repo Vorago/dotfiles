@@ -13,6 +13,8 @@ copyBin() {
 installApps() {
   packages/docker/install.sh
   packages/insync/install.sh
+  # enable snap
+  sudo rm /etc/apt/preferences.d/nosnap.pref
   cat packages/apt.list | xargs sudo apt install -y
   cat packages/snap.list | xargs -L1 sudo snap install --classic
 }
