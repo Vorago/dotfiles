@@ -1,8 +1,10 @@
 arandr
+autorandr
 direnv
 flameshot
 fzf
 keepassxc
+jq
 nitrogen
 python3-pip
 rofi
