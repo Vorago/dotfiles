@@ -32,5 +32,6 @@ prompt_context() {
 export EDITOR='vim'
 
 eval $(thefuck --alias)
+eval "$(direnv hook zsh)"
 
 source <(kubectl completion zsh)
