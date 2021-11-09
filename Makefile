@@ -30,8 +30,6 @@ packages:
 
 .PHONY: i3
 i3:
-	sudo wget https://raw.githubusercontent.com/lbonn/i3-quickterm/master/i3-quickterm -O /usr/bin/i3-quickterm
-	sudo chmod +x /usr/bin/i3-quickterm
 	pip install --user i3ipc
 
 .PHONY: config

@@ -7,3 +7,5 @@ hide_edge_borders both
 
 exec --no-startup-id nm-applet --sm-disable
 exec --no-startup-id nitrogen --restore
+exec --no-startup-id yakuake
+exec --no-startup-id noisetorch -i
