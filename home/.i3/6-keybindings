@@ -3,7 +3,7 @@ bindsym $mod+Shift+q kill
 
 bindsym $mod+d exec --no-startup-id "rofi -show drun";
 bindsym Print exec --no-startup-id "flameshot gui"
-bindsym $mod+p exec --no-startup-id "ls -1 /home/vorago/code | rofi -dmenu | xargs -I{} /usr/local/bin/runorraiseidea {}"
+bindsym $mod+p exec --no-startup-id "find /home/vorago/code -type d -path '*/.git' | cut -c19:w- | rev | cut -c6- | rev | rofi -dmenu | xargs -I{} /usr/local/bin/runorraiseidea {}"
 
 bindsym $mod+Shift+bracketleft move workspace to output left
 bindsym $mod+Shift+bracketright move workspace to output right
