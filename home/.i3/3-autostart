@@ -9,3 +9,6 @@ exec --no-startup-id nm-applet --sm-disable
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id yakuake
 exec --no-startup-id noisetorch -i
+exec --no-startup-id xset -dpms s off
+exec_always --no-startup-id autorandr --change
+
