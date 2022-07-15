@@ -2,6 +2,10 @@ theme = "solarized-dark"
 icons = "awesome"
 
 [[block]]
+block = "external_ip"
+format = "{ip} {country_flag}"
+
+[[block]]
 block = "disk_space"
 path = "/"
 alias = "/"
@@ -19,15 +23,16 @@ format_swap = "{swap_used_percents}"
 
 [[block]]
 block = "cpu"
+format = "{barchart}"
 interval = 1
-
-[[block]]
-block = "load"
-interval = 1
-format = "{1m}"
 
 [[block]]
 block = "sound"
+
+[[block]]
+block = "battery"
+interval = 10
+format = "{percentage}"
 
 [[block]]
 block = "time"
