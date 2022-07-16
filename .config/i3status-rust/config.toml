@@ -27,6 +27,12 @@ format = "{barchart}"
 interval = 1
 
 [[block]]
+block = "backlight"
+minimum = 15
+maximum = 100
+cycle = [0, 50, 100]
+
+[[block]]
 block = "sound"
 
 [[block]]
