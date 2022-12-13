@@ -1,0 +1,26 @@
+[aws]
+format = 'on [$symbol($profile )]($style)'
+symbol = "  "
+
+[aws.profile_aliases]
+aws-admin-access = 'admin'
+
+[golang]
+symbol = " "
+
+[kubernetes]
+format = '[$symbol$context( \($namespace\))]($style) in '
+symbol = "☸ "
+disabled = false
+[kubernetes.context_aliases]
+"arn:aws:eks:eu-central-1:418337671376:cluster/dev-cluster" = "dev"
+"arn:aws:eks:eu-central-1:418337671376:cluster/prod-eu-central-1" = "prod"
+
+[[battery.display]]
+threshold = 25
+style = "bold red"
+
+[sudo]
+disabled = false
+symbol = "sudo "
+
