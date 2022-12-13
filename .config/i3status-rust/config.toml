@@ -2,10 +2,6 @@ theme = "solarized-dark"
 icons = "awesome"
 
 [[block]]
-block = "external_ip"
-format = "{ip} {country_flag}"
-
-[[block]]
 block = "disk_space"
 path = "/"
 alias = "/"
