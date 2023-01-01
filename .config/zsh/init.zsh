@@ -1,4 +1,4 @@
-source $ZSH/oh-my-zsh.sh
+source ~/.zprezto/init.zsh
 eval "$(starship init zsh)"
 eval "$(direnv hook zsh)"
 eval "$(thefuck --alias)"
