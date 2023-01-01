@@ -7,3 +7,24 @@ sudo chmod +x /usr/local/bin/i3exit
 
 sudo curl https://github.com/Vorago/open-ide/releases/download/v1.0.0/open-ide -o /usr/local/bin/open-ide
 sudo chmod +x /usr/local/bin/open-ide
+
+
+
+# critical
+sudo pacman -Syu
+sudo pacman -Sy yay vim
+yay -Sy rofi
+
+# shell
+sudo pacman -S zsh starship fzf
+yay -S oh-my-zsh-git oh-my-zsh-plugin-autosuggestions
+
+# other
+sudo pacman -Sy xclip unzip xdotool telegram-desktop flameshot picom docker docker-compose i3status-rust bitwarden direnv
+yay -Sy dropbox jetbrains-toolbox google-chrome i3lock-fancy-rapid-git nvm slack-desktop thefuck nerd-fonts-complete
+
+
+## insync
+
+echo "change shell"
+echo "chsh -s $(which zsh)"
