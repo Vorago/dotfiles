@@ -6,6 +6,8 @@
 	name = Andrew Naydyonock
 	email = vorago@protonmail.com
 	signingkey = 40CF0D75E66EB776DA75E297D7578C1D50CC0B55
+[includeIf "gitdir:~/code/wnf/"]
+	path = ~/.work.gitconfig
 [gui]
 	encoding = utf-8
 [push]
