@@ -1,0 +1,23 @@
+#!/usr/bin/env zsh
+
+zstyle ':prezto:*:*' case-sensitive 'no'
+zstyle ':prezto:*:*' color 'yes'
+
+zstyle ':prezto:module:fzf' key-bindings 'yes'
+zstyle ':prezto:module:fzf' completion 'yes'
+zstyle ':prezto:module:fzf' colorscheme 'Solarized Light'
+
+zstyle ':prezto:module:autosuggestions:color' found ''
+
+
+zstyle ':prezto:load' pmodule \
+  'environment' \
+  'terminal' \
+  'editor' \
+  'utility' \
+  'completion' \
+  'history' \
+  'history-substring-search' \
+  'syntax-highlighting' \
+  'autosuggestions' \
+  'fzf'
