@@ -21,7 +21,7 @@ yay -S oh-my-zsh-git oh-my-zsh-plugin-autosuggestions
 
 # other
 sudo pacman -Sy xclip unzip xdotool telegram-desktop flameshot picom docker docker-compose i3status-rust bitwarden direnv
-yay -Sy dropbox insync jetbrains-toolbox google-chrome i3lock-fancy-rapid-git nvm slack-desktop thefuck joplin-appimage nerd-fonts-terminus nerd-fonts-hack-complete-git otf-nerd-fonts-fira-code
+yay -Sy dropbox insync jetbrains-toolbox google-chrome i3lock-fancy-rapid-git slack-desktop thefuck joplin-appimage nerd-fonts-terminus nerd-fonts-hack-complete-git otf-nerd-fonts-fira-code volta
 
 
 echo "change shell"
